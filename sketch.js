@@ -5,6 +5,7 @@ let bc = 0;
 let button;
 
 
+
 class rainDrop {
     constructor(x, y, v, sz, c) {
     this.x = x;
@@ -69,19 +70,13 @@ function setup() {
   random(0, windowWidth), random(0, windowHeight),random(30, 100),
   random(30, 100), color(random(100, 255))); 
 } 
-  button = createButton('play');
-  button.position(10,10);
-  button.mousePressed(startsound);
+mvSound.play();
 }
 
 function draw() { 
-  
   background(bc);
   for (let drop of rainDrops) {
     drop.move();
   drop.render(); 
     }
-}
-function startsound(){
-  mvSound.play();
 }
